@@ -8,6 +8,9 @@ body {
   position: absolute;
   top: 35%;
   left: 10%;
+  width: 400px;
+
+  
 }
 
 .typewriter h1 {
