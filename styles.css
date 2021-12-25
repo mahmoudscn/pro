@@ -15,7 +15,7 @@ body {
   white-space: nowrap;
   overflow: hidden;
   width: 620px;
-  font-size: 50px;
+  font-size: 40px;
   white-space: nowrap;
   overflow: hidden;
   animation: typewriter 2s steps(25) 1s 1 normal both;
@@ -25,8 +25,8 @@ body {
   border-right: 1px solid white;
   white-space: nowrap;
   overflow: hidden;
-  font-size: 30px;
-  width: 590px;
+  font-size: 25px;
+  width: 600px;
   white-space: nowrap;
   overflow: hidden;
   animation: typewriter 3s steps(40) 1s 1 normal both;
@@ -37,8 +37,8 @@ body {
   border-right: 1px solid white;
   white-space: nowrap;
   overflow: hidden;
-  font-size: 30px;
-  width: 590px;
+  font-size: 25px;
+  width: 600px;
   white-space: nowrap;
   overflow: hidden;
   animation: typewriter 3s steps(40) 1s 1 normal both;
