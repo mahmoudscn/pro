@@ -24,7 +24,7 @@ body {
 .typewriter #line-1 {
   border-right: 1px solid white;
   white-space: nowrap;
-  overflow: hidden;
+  
   font-size: 25px;
   width: 600px;
   white-space: nowrap;
