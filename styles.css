@@ -1,86 +1,260 @@
+html {
+  height: 100%;
+}
+
 body {
-  background: rgb(43,78,104);
-  color: rgb(220,220,220);
-  font-family: 'Fira Code', monospace;
+  overflow: hidden;
+  background: url("img.jpg") no-repeat center center fixed;
+  background-size: cover;
+  position: fixed;
+  padding: 0px;
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  font: normal 14px/1.618em "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
-.typewriter {
+body:before {
+  content: "";
+  height: 0px;
+  padding: 0px;
+  border: 130em solid url("img.jpg") no-repeat center center fixed;
   position: absolute;
-  top: 35%;
-  left: 10%;
+  left: 50%;
+  top: 100%;
+  z-index: 2;
+  display: block;
+  transform: translate(-50%, -50%);
+ background:  url("img.jpg") no-repeat center center;
+  background-size: cover;
+  background-blend-mode: soft-light;
+}
+
+h1,
+h2 {
+  font-weight: 500;
+  margin: 0px 0px 5px 0px;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 16px;
+}
+
+p {
+  margin: 0px;
+}
+
+button {
+  margin-top: 20px;
+  width: auto;
+  border: 1px solid #FF5722;
+  background: #fff;
+  padding: 10px 30px;
+  color: #FF5722;
+  border-radius: 50px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+button:hover {
+  width: auto;
+  background: #FF5722;
+  color: #fff;
+  padding: 10px 30px;
+  cursor: pointer;
+}
+.cart {
+  margin-top: 10px;
+  width: auto;
+  background: #FF5722;
+  color: #fff;
+  padding: 10px 30px;
+  cursor: pointer;
+}
+
+.product-card {
+  background: #FF5722;
+  width: 850px;
+  height: 556px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  overflow: hidden;
+  opacity: 0;
+  margin-top: 70px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
+  animation: init 1.5s 0.2s cubic-bezier(0.55, 0.055, 0.275, 0.19) forwards, materia 0.5s .9s cubic-bezier(0.86, 0, 0.07, 1) forwards;
+}
+.product-card header {
   width: 500px;
-  height:500px;
-
-  
+  height: 480px;
+  padding: 50px 0px 10px 0px;
+  display: inline-block;
+  float: left;
+  border-right: 2px dashed #EEEEEE;
+  background: #FFFFFF;
+  color: #000000;
+  margin-top: 50px;
+  opacity: 0;
+  text-align: center;
+  animation: moveIn 1s 1.5s ease forwards;
 }
 
-.typewriter h1 {
-  border-right: 1px solid white;
-  white-space: nowrap;
-  overflow: hidden;
-  width: 620px;
-  font-size: 40px;
-  white-space: nowrap;
-  overflow: hidden;
-  animation: typewriter 2s steps(25) 1s 1 normal both;
+.product-card header h1 {
+  color: #FF5722;
 }
 
-.typewriter #line-1 {
-  border-right: 1px solid white;
-  white-space: nowrap;
-  
-  font-size: 20px;
-  width: 650px;
-  overflow: hidden;
-  white-space: nowrap;
-  overflow: hidden;
-  animation: typewriter 3s steps(40) 1s 1 normal both;
-  animation-delay: 3.5s;
+.product-card header a {
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  margin: 10px 20px;
+  border-radius: 50%;
 }
 
-#line-2 {
-  border-right: 1px solid white;
-  white-space: nowrap;
-  overflow: hidden;
-  font-size: 50px;
-  width: 500px;
-  white-space: nowrap;
-  overflow: hidden;
-  animation: typewriter 3s steps(40) 1s 1 normal both;
-  animation-delay: 7s;
+.product-card header a > img {
+  max-width: 100%;
+  border-radius: 50%;
 }
 
-@keyframes typewriter {
+.product-card header a:after {
+  position: absolute;
+  content: "$500";
+  bottom: 3px;
+  right: 3px;
+  padding: 10px 5px;
+  border: 4px solid #68788C;
+  transform: scale(0);
+  background: linear-gradient(#FF5722 0%, #FF5722 50%, #FF5722 50%, #FF5722 100%);
+  color: #fff;
+  border-radius: 50%;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  animation: scaleIn 1.3s 1.5s ease forwards;
+}
+
+.product-card .product-bio {
+  width: 165px;
+  height: 180px;
+  display: inline-block;
+  float: right;
+  padding: 50px 20px 30px 20px;
+  background: #979DA6;
+  color: #333333;
+  margin-top: 50px;
+  text-align: center;
+  opacity: 0;
+  animation: moveIn 1s 1s ease forwards;
+}
+
+@keyframes init {
   0% {
-    width: 0;
-    border-right: none;
-  }
-  0.1% {
-    border-right: 1px solid rgb(220,220,220);
-  }
-  99.9% {
-    border-right: 1px solid rgb(220,220,220);
+    width: 0px;
+    height: 0px;
   }
   100% {
-    border: none;
+    width: 36px;
+    height: 36px;
+    margin-top: 0px;
+    opacity: 1;
   }
 }
 
-i {
-opacity: 0;
-animation: fadeIn 2s ease-in-out;
-animation-delay: 10s;
-animation-fill-mode: forwards;
-padding-top: 1rem;
-padding-left: 20px;
-
+@keyframes materia {
+  0% {
+    background: #E0E0E0;
+  }
+  50% {
+    border-radius: 4px;
+  }
+  100% {
+    width: 440px;
+    height: 280px;
+    background: #FFFFFF;
+    border-radius: 4px;
+  }
 }
 
-a {
-  color: rgb(220,220,220);
+@keyframes moveIn {
+  0% {
+    margin-top: 50px;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    margin-top: -20px;
+  }
 }
 
-@keyframes fadeIn {
-from {opacity:0;}
-to {opacity:1;}
+@media screen and (min-aspect-ratio: 4/3) {
+  body {
+    background-size: cover;
+  }
+  body:before {
+    width: 0px;
+  }
+  @ -webkit-keyframes puff {
+    0% {
+      top: 100%;
+      width: 0px;
+      padding-bottom: 0px;
+    }
+    100% {
+      top: 50%;
+      width: 100%;
+      padding-bottom: 100%;
+    }
+  }
+  @keyframes puff {
+    0% {
+      top: 100%;
+      width: 0px;
+      padding-bottom: 0px;
+    }
+    100% {
+      top: 50%;
+      width: 100%;
+      padding-bottom: 100%;
+    }
+  }
+}
+
+@media screen and (min-height: 480px) {
+  .product-card header {
+    width: auto;
+    height: auto;
+    padding: 20px 35px;
+    display: block;
+    float: none;
+    border-right: none;
+  }
+
+  .product-card .product-bio {
+    width: auto;
+    height: auto;
+    padding: 10px 20px 30px 20px;
+    display: block;
+    float: none;
+  }
+
+  @keyframes materia {
+    0% {
+      background: #E0E0E0;
+    }
+    50% {
+      border-radius: 4px;
+    }
+    100% {
+      width: 280px;
+      height: 440px;
+      background: #FFFFFF;
+      border-radius: 4px;
+    }
+  }
 }
