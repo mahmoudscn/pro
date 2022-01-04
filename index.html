@@ -12,100 +12,53 @@
         type = "image/x-icon">
 </head>
 <body>
-  <nav class="main-nav" id="main-nav">
-    <div style="height:80px;background: rgb(51,74,92);padding-top: 1px;"><h2 class="text-center" style="color:#fff; letter-spacing:2px;">MENU</h2></div>
-    <ul class="nav nav-pills nav-stacked">
-      <li class="active"><a href="#"><i class="fa fa-home fa-fw"></i>&nbsp; Home</a></li>
-      <li><a href="#about"><i class="fa fa-user fa-fw"></i>&nbsp; About</a></li>
-      <li><a href="#what-i-do"><i class="fa fa-signal fa-fw"></i>&nbsp; What I do</a></li>
-      <li><a href="#work"><i class="fa fa-briefcase fa-fw"></i>&nbsp; Recent Work</a></li>
-      <li><a href="#contact"><i class="fa fa-envelope-o fa-fw"></i>&nbsp; Contact</a></li>
-    </ul>
-  </nav>
+  <main>
+<section id="home">
+<h2>CLI - Command Line Interface Simulation</h2>
+<p>A fun experiment for displaying simple info in a geeky manner.</p>
+<p><span>Type 'help' + <kbd>Enter</kbd> -- for available commands.</span></p>
+</section>
 
-  <div class="page-wrap" >
+<section id="about">
+<h2><span>&raquo;About</span></h2>
+<p>
+I'm a Egypt based 20 years old, I am dart, flutter developer, I know AI and beleive in treatment by viruses rather than make new drugs which have bad side effects.</p>
+</section>
 
-    <div class="jumbotron">
-      <div style="margin-top:130px " class="container">
-        <a href="#main-nav" class="h5 open-menu"><i style="color:#fff; position: relative; bottom:120px; cursor:pointer;" class="fa fa-bars fa-2x fa-fw"></i></a>
-        <a href="#" class="h5 close-menu"><i style="color:#fff; position: relative; bottom:120px; cursor:pointer;" class="fa fa-times fa-2x fa-fw"></i></a>
-        <h1>I'm Mahmoud</h1>
-        <div class="spacer"></div>
-        <h1>Developer + Pharmacist</h1>
-        <div class="spacer"></div>
-        <hr><hr>
-        <h2 class="text-center">I know pharmacy, build apps</h2>
-      </div>
-    </div>
+<section id="usage">
+<h2><span>&raquo;Usage</span></h2>
+<p>Using it is pretty straight forward. Create several(as much as you need) divs or &laquo;section&raquo; elements each with it's unique id to hold your content. Make sure to have an error section (id="error") with some information to warn the user when he/she mistypes a command or if there is no section with that name, think of it as a 404 page.</p>
+<p>A section with id="help" is also required so you can list all the available sections and let your users know what words to write to access that particular content.</p>
+<p>The input field must be a standalone element and must not be placed inside any of the content divs or sections, and make sure you give it a classname "command", if you want to name it anything else you need to edit the app.js and change all instances of .command in the script to match your chosen classname.</p>
+<p>In short, just view the source code of this demo, copy/modify it to your liking making sure you include the error and help sections.</p>
+</section>
 
-    <div class="section" id="about"><h1>About</h1><hr></div>
+<section id="myblog">
+<h2><span>&raquo;myblog</span></h2>
+<p>Ok,read,enjoy<a href="https://mahmoudai.blogspot.com/"><br>Myblog</a></p>
+</section>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="well">
-            <img src="https://pbs.twimg.com/profile_images/1477618116930813952/kKmJ47vS_400x400.jpg" style="height:100%; width:100%; border-radius:50%">
-          </div>
-        </div>
-        <div class="col-md-8">
-          <div class="well">
-            <h3>Mahmoud Ahmed</h3>
-            <p>I'm a Egypt based 20 years old, I am dart, flutter developer, I know AI and beleive in treatment by viruses rather than make new drugs which have bad side effects.</p>
-            <p><a href="#form" class="btn btn-default" onclick="location.href = 'https://mahmoudai.blogspot.com/';">My blog</a></p>
-          </div>
-        </div>
-      </div><!--/.row-->
-    </div><!--/.container-->
+<section id="error">
+<p>Command not found!<p>
+<p><span>Type 'help' + <kbd>Enter</kbd> -- for available commands.</span></p>
+</section>
 
-    <div class="section" id="what-i-do"><h1>What I Do</h1><hr></div>
+<section id="help">
+<h2><span>&raquo;Help?</span></h2>
+<p><span>Type [command] + <kbd>Enter</kbd></span></p>
+<ul>
+	<li>'home' -- Thats obvious!</li>
+	<li>'about' -- About me</li>
+  <li>'usage' -- How to</li>
+  <li>'myblog' -- link to my blog to read amazing articles</li>
+	<li>'help' -- displays this list</li>
+</ul>
+</section>
 
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8">
-          <div class="well">
-            <h3>Skills</h3>
-            <div class="spacer"></div><div class="spacer"></div>
-            <div class="row">
-              <div class="col-md-4">
-              <div style="padding-bottom:3%">  <div class="html"></div> <h4 style="font-weight: 400; display: inline; ">Dart</h4><br> </div>
-          <div style="padding-top:3%;padding-bottom:3%">      <div class="css"></div> <h4 style="font-weight: 400; display: inline;">pharmacy</h4><br> </div>
-          <div style="padding-top:3%;padding-bottom:3%">      <div class="php"></div> <h4 style="font-weight: 400; display: inline;">flutter</h4><br></div>
-          <div style="padding-top:4%;padding-bottom:3%">      <div class="sql"></div> <h4 style="font-weight: 400; display: inline; margin-bottom:5px;">ML,AI</h4></div>
-              </div>
-              <div class="col-md-8">
-                <div class="progress">
-                  <div class="progress-bar progress-bar-html" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
-                    <span class="sr-only">HTML5 90%</span>
-                  </div>
-                </div>
-                <div class="progress">
-                  <div class="progress-bar progress-bar-css" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%">
-                    <span class="sr-only">CSS3 90%</span>
-                  </div>
-                </div>
-                <div class="progress">
-                  <div class="progress-bar progress-bar-php" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
-                    <span class="sr-only">PHP 70%</span>
-                  </div>
-                </div>
-                <div class="progress">
-                  <div class="progress-bar progress-bar-sql" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-                    <span class="sr-only">SQL 80%</span>
-                  </div>
-                </div>
-              </div><!--/.col-6-->
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="well">
-            <h3>New way, New path</h3>
-            <p>I am doing my best as pharmacy student and programmer to figure out ways in treatment, like why do we develop new insulin insteat of trying to fixing the pancreas .</p>
-          </div>
-        </div>
-      </div><!--/.row-->
+<span class="command">syndicatefx:/$<input type="text"></span>
+</main>
+    <script src="myscripts.js"></script>
 
-  </div><!--/.page-wrap-->
 </body>
 </html>
 </body>
